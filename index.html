@@ -1,0 +1,1586 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bollads Restaurant and Lounge | Akala Expressway, Ibadan</title>
+    <meta
+      name="description"
+      content="Landing page concept for Bollads Restaurant and Lounge on Akala Expressway, Ibadan, blending refined dining with evening lounge ambience."
+    />
+    <meta property="og:title" content="Bollads Restaurant and Lounge | Akala Expressway, Ibadan" />
+    <meta
+      property="og:description"
+      content="Landing page concept for Bollads Restaurant and Lounge on Akala Expressway, Ibadan, blending refined dining with evening lounge ambience."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Google Fonts: Playfair Display + Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* --- CSS RESET & VARIABLES --- */
+      *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        /* Primary Palette: Burgundy, Cream & Burnished Amber */
+        --color-burgundy-900: #350A14;
+        --color-burgundy-800: #4B0E1D;
+        --color-burgundy-700: #621427;
+        --color-burgundy-600: #7E1C34;
+        --color-burgundy-50: #FBF4F5;
+
+        --color-amber-600: #B87625;
+        --color-amber-500: #C98835;
+        --color-amber-400: #E0A44D;
+        --color-amber-100: #F6EBD9;
+
+        --color-cream-100: #FDFBF8;
+        --color-cream-200: #F7F2EA;
+        --color-cream-300: #EFE7DB;
+        --color-cream-400: #E2D6C5;
+
+        --color-text-main: #1F1716;
+        --color-text-body: #4A403C;
+        --color-text-muted: #796C66;
+        --color-white: #FFFFFF;
+
+        --color-border: #E6DCCD;
+        --color-border-dark: #D4C4B0;
+
+        /* Typography */
+        --font-display: 'Playfair Display', Georgia, serif;
+        --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+        --radius-sm: 8px;
+        --radius-md: 14px;
+        --radius-lg: 20px;
+        --radius-full: 9999px;
+
+        --shadow-soft: 0 4px 20px -2px rgba(75, 14, 29, 0.06);
+        --shadow-elevated: 0 12px 36px -4px rgba(75, 14, 29, 0.10);
+      }
+
+      html {
+        scroll-behavior: smooth;
+        background-color: var(--color-cream-100);
+        color: var(--color-text-body);
+        font-family: var(--font-body);
+        font-size: 16px;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      body {
+        background-color: var(--color-cream-100);
+        overflow-x: hidden;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img, svg {
+        display: block;
+        max-width: 100%;
+      }
+
+      /* Container */
+      .site-container {
+        width: 100%;
+        max-width: 1160px;
+        margin: 0 auto;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      @media (min-width: 640px) {
+        .site-container {
+          padding-left: 32px;
+          padding-right: 32px;
+        }
+      }
+
+      /* --- TOP ANNOUNCEMENT / UTILITY BAR --- */
+      .top-strip {
+        background-color: var(--color-burgundy-900);
+        color: var(--color-cream-200);
+        font-size: 13px;
+        font-weight: 500;
+        padding: 9px 16px;
+        letter-spacing: 0.02em;
+      }
+
+      .top-strip-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .top-strip-left {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .status-dot {
+        width: 7px;
+        height: 7px;
+        background-color: #34D399;
+        border-radius: 50%;
+        display: inline-block;
+        box-shadow: 0 0 0 3px rgba(52, 211, 153, 0.25);
+      }
+
+      .top-strip-link {
+        color: var(--color-amber-400);
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        transition: color 0.2s ease;
+      }
+
+      .top-strip-link:hover {
+        color: #F8D89C;
+      }
+
+      /* --- MAIN HEADER --- */
+      .main-header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background-color: rgba(253, 251, 248, 0.94);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--color-border);
+        transition: box-shadow 0.2s ease;
+      }
+
+      .header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 74px;
+      }
+
+      .brand-group {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .brand-title {
+        font-family: var(--font-display);
+        font-size: 23px;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+        color: var(--color-burgundy-900);
+        line-height: 1.15;
+      }
+
+      .brand-sub {
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--color-amber-600);
+      }
+
+      .header-nav {
+        display: none;
+        align-items: center;
+        gap: 28px;
+      }
+
+      @media (min-width: 860px) {
+        .header-nav {
+          display: flex;
+        }
+      }
+
+      .nav-link {
+        font-size: 14.5px;
+        font-weight: 500;
+        color: var(--color-text-body);
+        transition: color 0.2s ease;
+      }
+
+      .nav-link:hover {
+        color: var(--color-burgundy-700);
+      }
+
+      .header-cta-group {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      /* Buttons */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 9px;
+        padding: 11px 22px;
+        border-radius: var(--radius-full);
+        font-family: var(--font-body);
+        font-size: 14.5px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+        text-align: center;
+        white-space: nowrap;
+        border: 1px solid transparent;
+      }
+
+      .btn-primary {
+        background-color: var(--color-burgundy-800);
+        color: var(--color-cream-100);
+        box-shadow: 0 4px 14px rgba(75, 14, 29, 0.18);
+      }
+
+      .btn-primary:hover {
+        background-color: var(--color-burgundy-900);
+        transform: translateY(-1px);
+        box-shadow: 0 6px 18px rgba(75, 14, 29, 0.24);
+      }
+
+      .btn-whatsapp {
+        background-color: #1E7E34;
+        color: #FFFFFF;
+        box-shadow: 0 4px 14px rgba(30, 126, 52, 0.22);
+      }
+
+      .btn-whatsapp:hover {
+        background-color: #166527;
+        transform: translateY(-1px);
+        box-shadow: 0 6px 18px rgba(30, 126, 52, 0.28);
+      }
+
+      .btn-secondary {
+        background-color: transparent;
+        color: var(--color-burgundy-800);
+        border-color: var(--color-burgundy-800);
+      }
+
+      .btn-secondary:hover {
+        background-color: var(--color-burgundy-50);
+      }
+
+      /* --- HERO SECTION --- */
+      .hero-section {
+        padding-top: 48px;
+        padding-bottom: 64px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      @media (min-width: 960px) {
+        .hero-section {
+          padding-top: 76px;
+          padding-bottom: 96px;
+        }
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 40px;
+        align-items: center;
+      }
+
+      @media (min-width: 960px) {
+        .hero-grid {
+          grid-template-columns: 1.15fr 0.85fr;
+          gap: 56px;
+        }
+      }
+
+      .location-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 14px;
+        background-color: var(--color-cream-200);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-full);
+        font-size: 12.5px;
+        font-weight: 600;
+        color: var(--color-burgundy-800);
+        margin-bottom: 22px;
+      }
+
+      .location-pill svg {
+        color: var(--color-amber-600);
+      }
+
+      .hero-headline {
+        font-family: var(--font-display);
+        font-size: clamp(34px, 5.2vw, 56px);
+        line-height: 1.12;
+        color: var(--color-burgundy-900);
+        letter-spacing: -0.02em;
+        margin-bottom: 20px;
+        font-weight: 700;
+      }
+
+      .hero-headline em {
+        font-style: italic;
+        font-weight: 500;
+        color: var(--color-amber-600);
+      }
+
+      .hero-tagline {
+        font-size: clamp(16px, 1.8vw, 19px);
+        line-height: 1.62;
+        color: var(--color-text-body);
+        margin-bottom: 34px;
+        max-width: 580px;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 36px;
+      }
+
+      @media (min-width: 480px) {
+        .hero-actions {
+          flex-direction: row;
+          align-items: center;
+        }
+      }
+
+      .hero-actions .btn {
+        padding: 14px 28px;
+        font-size: 15.5px;
+      }
+
+      .hero-note {
+        font-size: 12.5px;
+        color: var(--color-text-muted);
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      /* Hero Visual: Bespoke Restaurant + Lounge Emblem Showcase */
+      .hero-visual-card {
+        background: linear-gradient(145deg, #FFFFFF 0%, var(--color-cream-200) 100%);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-lg);
+        padding: 28px 24px;
+        box-shadow: var(--shadow-elevated);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero-badge-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 22px;
+        padding-bottom: 14px;
+        border-bottom: 1px solid var(--color-border);
+      }
+
+      .hero-badge-left {
+        font-family: var(--font-display);
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--color-burgundy-900);
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+
+      .dual-mode-indicator {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 11.5px;
+        font-weight: 700;
+        color: var(--color-burgundy-800);
+        background-color: var(--color-amber-100);
+        padding: 4px 10px;
+        border-radius: var(--radius-full);
+      }
+
+      /* Real Photography Visual Card in Hero */
+      .hero-image-wrap {
+        width: 100%;
+        height: 270px;
+        border-radius: var(--radius-md);
+        position: relative;
+        overflow: hidden;
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2), 0 8px 24px rgba(75, 14, 29, 0.12);
+        background-color: var(--color-burgundy-900);
+      }
+
+      .hero-img-cover {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .hero-visual-card:hover .hero-img-cover {
+        transform: scale(1.04);
+      }
+
+      .hero-image-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(30, 6, 12, 0.15) 0%, rgba(30, 6, 12, 0.75) 100%);
+        display: flex;
+        align-items: flex-end;
+        padding: 16px;
+        pointer-events: none;
+      }
+
+      .hero-image-tagline {
+        color: var(--color-cream-100);
+        font-family: var(--font-display);
+        font-size: 15px;
+        font-style: italic;
+        letter-spacing: 0.01em;
+        text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+      }
+
+      .hero-visual-footer {
+        margin-top: 22px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+
+      .visual-stat-item {
+        background-color: var(--color-white);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-sm);
+        padding: 12px;
+      }
+
+      .visual-stat-label {
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--color-text-muted);
+        margin-bottom: 2px;
+      }
+
+      .visual-stat-value {
+        font-family: var(--font-display);
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--color-burgundy-900);
+      }
+
+      /* --- SECTION INTRO HEADERS (Off-Center, Editorial) --- */
+      .section-header {
+        margin-bottom: 40px;
+      }
+
+      .section-eyebrow {
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--color-amber-600);
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      .section-title {
+        font-family: var(--font-display);
+        font-size: clamp(28px, 3.8vw, 42px);
+        line-height: 1.18;
+        color: var(--color-burgundy-900);
+        letter-spacing: -0.015em;
+        margin-bottom: 12px;
+      }
+
+      .section-subtitle {
+        font-size: 16px;
+        color: var(--color-text-body);
+        max-width: 620px;
+        line-height: 1.6;
+      }
+
+      /* --- MENU HIGHLIGHTS SECTION --- */
+      .menu-section {
+        padding-top: 64px;
+        padding-bottom: 80px;
+        background-color: var(--color-cream-200);
+        border-top: 1px solid var(--color-border);
+        border-bottom: 1px solid var(--color-border);
+      }
+
+      @media (min-width: 960px) {
+        .menu-section {
+          padding-top: 96px;
+          padding-bottom: 112px;
+        }
+      }
+
+      .menu-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      @media (min-width: 640px) {
+        .menu-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 24px;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .menu-grid {
+          grid-template-columns: repeat(4, 1fr);
+          gap: 24px;
+        }
+      }
+
+      .menu-card {
+        background-color: var(--color-white);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.22s ease, box-shadow 0.22s ease;
+        box-shadow: var(--shadow-soft);
+      }
+
+      .menu-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-elevated);
+        border-color: var(--color-border-dark);
+      }
+
+      /* Real Culinary & Cocktail Photography Tiles */
+      .card-image-wrap {
+        height: 196px;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        background-color: var(--color-burgundy-900);
+      }
+
+      .card-food-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .menu-card:hover .card-food-img {
+        transform: scale(1.06);
+      }
+
+      .art-tag {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 5px 11px;
+        border-radius: var(--radius-full);
+        background-color: rgba(253, 251, 248, 0.94);
+        color: var(--color-burgundy-900);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+        z-index: 2;
+        backdrop-filter: blur(4px);
+      }
+
+      .card-body {
+        padding: 22px 20px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+      }
+
+      .card-header-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 8px;
+        margin-bottom: 8px;
+      }
+
+      .card-item-name {
+        font-family: var(--font-display);
+        font-size: 18.5px;
+        font-weight: 700;
+        color: var(--color-burgundy-900);
+        line-height: 1.25;
+      }
+
+      .card-badge-pill {
+        font-size: 11.5px;
+        font-weight: 600;
+        color: var(--color-amber-600);
+        white-space: nowrap;
+      }
+
+      .card-description {
+        font-size: 14px;
+        color: var(--color-text-body);
+        line-height: 1.55;
+        margin-bottom: 18px;
+        flex-grow: 1;
+      }
+
+      .card-footer {
+        padding-top: 14px;
+        border-top: 1px dashed var(--color-border);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 13px;
+      }
+
+      .card-pairing {
+        font-size: 12px;
+        color: var(--color-text-muted);
+        font-style: italic;
+      }
+
+      .card-order-btn {
+        color: var(--color-burgundy-800);
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        font-size: 13px;
+        transition: color 0.15s ease;
+      }
+
+      .card-order-btn:hover {
+        color: var(--color-amber-600);
+      }
+
+      /* --- THE LOUNGE EXPERIENCE SECTION --- */
+      .lounge-section {
+        padding-top: 72px;
+        padding-bottom: 80px;
+        position: relative;
+      }
+
+      @media (min-width: 960px) {
+        .lounge-section {
+          padding-top: 104px;
+          padding-bottom: 116px;
+        }
+      }
+
+      .lounge-box {
+        background-color: var(--color-burgundy-900);
+        color: var(--color-cream-100);
+        border-radius: var(--radius-lg);
+        padding: 36px 24px;
+        position: relative;
+        overflow: hidden;
+        border: 1px solid #4D0E1C;
+        box-shadow: var(--shadow-elevated);
+      }
+
+      @media (min-width: 768px) {
+        .lounge-box {
+          padding: 56px 48px;
+        }
+      }
+
+      /* Decorative amber aura */
+      .lounge-aura {
+        position: absolute;
+        top: -60px;
+        right: -60px;
+        width: 320px;
+        height: 320px;
+        background: radial-gradient(circle, rgba(201, 136, 53, 0.22) 0%, rgba(201, 136, 53, 0.02) 60%, transparent 80%);
+        border-radius: 50%;
+        pointer-events: none;
+      }
+
+      .lounge-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 36px;
+        position: relative;
+        z-index: 1;
+      }
+
+      @media (min-width: 880px) {
+        .lounge-grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 56px;
+          align-items: center;
+        }
+      }
+
+      .lounge-eyebrow {
+        color: var(--color-amber-400);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .lounge-title {
+        font-family: var(--font-display);
+        font-size: clamp(28px, 4vw, 44px);
+        line-height: 1.15;
+        color: #FFFDF9;
+        margin-bottom: 20px;
+      }
+
+      .lounge-title em {
+        font-style: italic;
+        color: var(--color-amber-400);
+        font-weight: 400;
+      }
+
+      .lounge-body {
+        font-size: 16px;
+        line-height: 1.68;
+        color: var(--color-cream-300);
+        margin-bottom: 28px;
+      }
+
+      .lounge-cta-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .lounge-pillars {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      .pillar-item {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: var(--radius-md);
+        padding: 18px 20px;
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+        transition: background 0.2s ease;
+      }
+
+      .pillar-item:hover {
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      .pillar-icon-box {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        background-color: var(--color-burgundy-700);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--color-amber-400);
+        flex-shrink: 0;
+      }
+
+      .pillar-title {
+        font-family: var(--font-display);
+        font-size: 16.5px;
+        font-weight: 600;
+        color: #FFFFFF;
+        margin-bottom: 3px;
+      }
+
+      .pillar-text {
+        font-size: 13.5px;
+        color: var(--color-cream-300);
+        line-height: 1.5;
+      }
+
+      /* --- LOCATION & HOURS STRIP --- */
+      .location-section {
+        padding-top: 48px;
+        padding-bottom: 72px;
+        background-color: var(--color-cream-100);
+      }
+
+      @media (min-width: 960px) {
+        .location-section {
+          padding-top: 64px;
+          padding-bottom: 96px;
+        }
+      }
+
+      .location-card {
+        background-color: var(--color-white);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-lg);
+        padding: 32px 24px;
+        box-shadow: var(--shadow-soft);
+      }
+
+      @media (min-width: 768px) {
+        .location-card {
+          padding: 44px 40px;
+        }
+      }
+
+      .location-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      @media (min-width: 860px) {
+        .location-grid {
+          grid-template-columns: 1.2fr 1fr;
+          gap: 48px;
+          align-items: center;
+        }
+      }
+
+      .address-block-title {
+        font-family: var(--font-display);
+        font-size: 26px;
+        font-weight: 700;
+        color: var(--color-burgundy-900);
+        margin-bottom: 10px;
+      }
+
+      .address-detail {
+        font-size: 16px;
+        color: var(--color-text-body);
+        line-height: 1.6;
+        margin-bottom: 18px;
+      }
+
+      .landmark-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 12.5px;
+        color: var(--color-text-muted);
+        background-color: var(--color-cream-200);
+        padding: 6px 12px;
+        border-radius: var(--radius-sm);
+        margin-bottom: 24px;
+      }
+
+      .direct-contact-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      /* Hours breakdown table */
+      .hours-card {
+        background-color: var(--color-cream-200);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        padding: 24px;
+      }
+
+      .hours-header {
+        font-family: var(--font-display);
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--color-burgundy-900);
+        margin-bottom: 16px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid var(--color-border);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .hours-list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .hours-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+      }
+
+      .hours-day {
+        font-weight: 600;
+        color: var(--color-text-main);
+      }
+
+      .hours-time {
+        color: var(--color-text-body);
+        font-weight: 500;
+      }
+
+      .hours-badge-lounge {
+        font-size: 11px;
+        font-weight: 700;
+        color: var(--color-amber-600);
+        background-color: var(--color-amber-100);
+        padding: 2px 7px;
+        border-radius: 4px;
+        margin-left: 6px;
+      }
+
+      /* --- SIMPLE, REFINED FOOTER --- */
+      .site-footer {
+        background-color: var(--color-burgundy-900);
+        color: var(--color-cream-300);
+        padding: 48px 0 32px;
+        border-top: 1px solid #480D1C;
+        font-size: 14px;
+      }
+
+      .footer-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+      }
+
+      @media (min-width: 768px) {
+        .footer-inner {
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+        }
+      }
+
+      .footer-brand {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .footer-brand-title {
+        font-family: var(--font-display);
+        font-size: 22px;
+        font-weight: 700;
+        color: #FFFDF9;
+      }
+
+      .footer-brand-loc {
+        font-size: 13px;
+        color: var(--color-cream-400);
+      }
+
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        font-size: 13.5px;
+      }
+
+      .footer-link {
+        color: var(--color-cream-300);
+        transition: color 0.15s ease;
+      }
+
+      .footer-link:hover {
+        color: var(--color-amber-400);
+      }
+
+      .footer-bottom {
+        padding-top: 24px;
+        margin-top: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 12px;
+        color: var(--color-cream-400);
+      }
+
+      @media (min-width: 640px) {
+        .footer-bottom {
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+        }
+      }
+
+      /* --- MOBILE QUICK ACTION BAR --- */
+      .mobile-action-bar {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(253, 251, 248, 0.96);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        padding: 10px 16px 14px;
+        border-top: 1px solid var(--color-border);
+        z-index: 90;
+        box-shadow: 0 -4px 18px rgba(0, 0, 0, 0.08);
+      }
+
+      @media (min-width: 768px) {
+        .mobile-action-bar {
+          display: none;
+        }
+      }
+
+      .mobile-action-bar .btn {
+        width: 100%;
+        padding: 13px 20px;
+        font-size: 15px;
+      }
+
+      /* Padding for content above mobile sticky bar */
+      @media (max-width: 767px) {
+        .site-footer {
+          padding-bottom: 90px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Top Announcement Strip -->
+    <header class="top-strip" id="top-announcement">
+      <div class="site-container top-strip-inner">
+        <div class="top-strip-left">
+          <span class="status-dot"></span>
+          <span>Open Today: Kitchen 12PM • Lounge Vibes Till 1AM</span>
+        </div>
+        <a
+          href="https://wa.me/2348000000000?text=Hello%20Bollads%2C%20I%20would%20like%20to%20reserve%20a%20table%20for%20tonight"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="top-strip-link"
+          id="top-wa-link"
+        >
+          <span>WhatsApp Reservations</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </header>
+
+    <!-- Main Navigation Bar -->
+    <nav class="main-header" id="main-nav">
+      <div class="site-container header-inner">
+        <a href="#top" class="brand-group" id="brand-logo-link">
+          <span class="brand-title">Bollads</span>
+          <span class="brand-sub">Restaurant &amp; Lounge • Ibadan</span>
+        </a>
+
+        <div class="header-nav">
+          <a href="#menu" class="nav-link" id="nav-link-menu">Menu Highlights</a>
+          <a href="#lounge" class="nav-link" id="nav-link-lounge">The Lounge Experience</a>
+          <a href="#location" class="nav-link" id="nav-link-location">Akala Expressway</a>
+        </div>
+
+        <div class="header-cta-group">
+          <a
+            href="https://wa.me/2348000000000?text=Hello%20Bollads%2C%20I%20would%20like%20to%20reserve%20a%20table%20or%20make%20an%20order."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-whatsapp"
+            id="header-cta-btn"
+          >
+            <!-- WhatsApp SVG Icon -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.45 1.03 2.62.13.17 1.78 2.71 4.3 3.8 2.53 1.09 2.53.73 2.98.69.46-.04 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.28z"/>
+            </svg>
+            <span>Order on WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main id="top">
+      <!-- 1. HERO SECTION -->
+      <section class="hero-section" id="hero">
+        <div class="site-container">
+          <div class="hero-grid">
+            <!-- Left Editorial Text Block -->
+            <div class="hero-content">
+              <div class="location-pill" id="hero-badge">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+                <span>Akala Expressway, Ibadan</span>
+              </div>
+
+              <h1 class="hero-headline">
+                Bollads Restaurant <em>&amp;</em> Lounge
+              </h1>
+
+              <p class="hero-tagline">
+                Hearty plates by day, velvety cocktails and soulful lounge energy after dusk.
+                An unhurried destination where seasoned culinary craft meets the relaxed pulse of Akala Expressway.
+              </p>
+
+              <div class="hero-actions">
+                <a
+                  href="https://wa.me/2348000000000?text=Hello%20Bollads%2C%20I%20would%20like%20to%20reserve%20a%20table%20for%20tonight"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-whatsapp"
+                  id="hero-reserve-btn"
+                >
+                  <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.45 1.03 2.62.13.17 1.78 2.71 4.3 3.8 2.53 1.09 2.53.73 2.98.69.46-.04 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.28z"/>
+                  </svg>
+                  <span>Reserve a Table on WhatsApp</span>
+                </a>
+
+                <a href="#menu" class="btn btn-secondary" id="hero-menu-btn">
+                  <span>Explore Menu Highlights</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+                  </svg>
+                </a>
+              </div>
+
+              <div class="hero-note" id="hero-phone-note">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+                <span>Direct WhatsApp concierge: <strong>+234 800 000 0000</strong> (Instant table &amp; takeaway confirmations)</span>
+              </div>
+            </div>
+
+            <!-- Right Visual Showcase Card with Real Photography -->
+            <div class="hero-visual-card" id="hero-visual-emblem">
+              <div class="hero-badge-top">
+                <span class="hero-badge-left">The Atmosphere</span>
+                <span class="dual-mode-indicator">
+                  <span class="status-dot"></span>
+                  Dining &amp; Lounge
+                </span>
+              </div>
+
+              <div class="hero-image-wrap">
+                <img
+                  src="./images/hero-lounge.jpg"
+                  alt="Bollads Restaurant and Lounge interior with ambient lighting, velvet seating, and cocktail bar"
+                  class="hero-img-cover"
+                  referrerpolicy="no-referrer"
+                />
+                <div class="hero-image-overlay">
+                  <span class="hero-image-tagline">"Where good meals meet late evening rhythm"</span>
+                </div>
+              </div>
+
+              <div class="hero-visual-footer">
+                <div class="visual-stat-item">
+                  <div class="visual-stat-label">Day Mood</div>
+                  <div class="visual-stat-value">Gourmet Dining</div>
+                </div>
+                <div class="visual-stat-item">
+                  <div class="visual-stat-label">Night Mood</div>
+                  <div class="visual-stat-value">Lounge &amp; Rhythm</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. MENU HIGHLIGHTS SECTION -->
+      <section class="menu-section" id="menu">
+        <div class="site-container">
+          <div class="section-header">
+            <span class="section-eyebrow">Curated Selections</span>
+            <h2 class="section-title">Signatures from the Kitchen &amp; Bar</h2>
+            <p class="section-subtitle">
+              Carefully balanced for both unhurried sit-down feasts and evening grazing over craft pours.
+            </p>
+          </div>
+
+          <div class="menu-grid">
+            <!-- Card 1: Kitchen Signature -->
+            <article class="menu-card" id="menu-card-1">
+              <div class="card-image-wrap">
+                <img
+                  src="./images/peppered-asun.jpg"
+                  alt="Bollads Peppered Asun - tender slow-smoked spicy goat meat with peppers and onions"
+                  class="card-food-img"
+                  referrerpolicy="no-referrer"
+                  loading="lazy"
+                />
+                <span class="art-tag">Kitchen Signature</span>
+              </div>
+
+              <div class="card-body">
+                <div class="card-header-row">
+                  <h3 class="card-item-name">Bollads Peppered Asun</h3>
+                  <span class="card-badge-pill">Hot &amp; Smoked</span>
+                </div>
+                <p class="card-description">
+                  Tender, slow-smoked diced goat meat flame-tossed in fiery Scotch bonnet, sweet caramelised onions, and aromatic uziza seed oil.
+                </p>
+                <div class="card-footer">
+                  <span class="card-pairing">Pairs with Chilled Chapman</span>
+                  <a
+                    href="https://wa.me/2348000000000?text=Hello%20Bollads%2C%20I%20would%20like%20to%20order%20the%20Peppered%20Asun"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="card-order-btn"
+                  >
+                    <span>Order</span>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 2: Kitchen Signature -->
+            <article class="menu-card" id="menu-card-2">
+              <div class="card-image-wrap">
+                <img
+                  src="./images/croaker-fish.jpg"
+                  alt="Whole Charred Croaker Fish with grilled marks, lime wedges and golden yam chips"
+                  class="card-food-img"
+                  referrerpolicy="no-referrer"
+                  loading="lazy"
+                />
+                <span class="art-tag">Flame Grill</span>
+              </div>
+
+              <div class="card-body">
+                <div class="card-header-row">
+                  <h3 class="card-item-name">Charred Croaker Fish</h3>
+                  <span class="card-badge-pill">Whole Catch</span>
+                </div>
+                <p class="card-description">
+                  Whole seasoned croaker marinated overnight in ginger-garlic paste, fire-grilled to crispy perfection with golden spiced yam chips.
+                </p>
+                <div class="card-footer">
+                  <span class="card-pairing">Accompanied with Pepper Dip</span>
+                  <a
+                    href="https://wa.me/2348000000000?text=Hello%20Bollads%2C%20I%20would%20like%20to%20order%20the%20Charred%20Croaker%20Fish"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="card-order-btn"
+                  >
+                    <span>Order</span>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 3: Lounge Small Plate -->
+            <article class="menu-card" id="menu-card-3">
+              <div class="card-image-wrap">
+                <img
+                  src="./images/suya-wings.jpg"
+                  alt="Spicy Suya Glazed Chicken Wings and Sweet Golden Fried Plantain Dodo"
+                  class="card-food-img"
+                  referrerpolicy="no-referrer"
+                  loading="lazy"
+                />
+                <span class="art-tag">Lounge Bites</span>
+              </div>
+
+              <div class="card-body">
+                <div class="card-header-row">
+                  <h3 class="card-item-name">Suya Wings &amp; Dodo</h3>
+                  <span class="card-badge-pill">Crowd Favorite</span>
+                </div>
+                <p class="card-description">
+                  Crisp chicken wings crusted in northern yaji spice glaze, paired with sweet ripe plantain rounds and house tangy cream dip.
+                </p>
+                <div class="card-footer">
+                  <span class="card-pairing">Perfect for table sharing</span>
+                  <a
+                    href="https://wa.me/2348000000000?text=Hello%20Bollads%2C%20I%20would%20like%20to%20order%20the%20Suya%20Wings"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="card-order-btn"
+                  >
+                    <span>Order</span>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 4: Lounge Signature Cocktail -->
+            <article class="menu-card" id="menu-card-4">
+              <div class="card-image-wrap">
+                <img
+                  src="./images/cocktail.jpg"
+                  alt="The Akala Sunset craft cocktail in crystal coupe glass garnished with blood orange and rosemary"
+                  class="card-food-img"
+                  referrerpolicy="no-referrer"
+                  loading="lazy"
+                />
+                <span class="art-tag">Signature Sip</span>
+              </div>
+
+              <div class="card-body">
+                <div class="card-header-row">
+                  <h3 class="card-item-name">The Akala Sunset</h3>
+                  <span class="card-badge-pill">Craft Cocktail</span>
+                </div>
+                <p class="card-description">
+                  Aged spiced rum blended with clarified zobo reduction, charred orange peel, fragrant ginger bitters, and aromatic rosemary smoke.
+                </p>
+                <div class="card-footer">
+                  <span class="card-pairing">House Special Mixology</span>
+                  <a
+                    href="https://wa.me/2348000000000?text=Hello%20Bollads%2C%20I%20would%20like%20to%20order%20The%20Akala%20Sunset"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="card-order-btn"
+                  >
+                    <span>Order</span>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. THE LOUNGE EXPERIENCE SECTION -->
+      <section class="lounge-section" id="lounge">
+        <div class="site-container">
+          <div class="lounge-box">
+            <div class="lounge-aura"></div>
+            <div class="lounge-grid">
+              <!-- Left: The Narrative -->
+              <div class="lounge-narrative">
+                <span class="lounge-eyebrow">The Nightlife Edge</span>
+                <h2 class="lounge-title">
+                  Not just another restaurant. <em>A sanctuary to unwind.</em>
+                </h2>
+                <p class="lounge-body">
+                  When the sun dips beneath the Akala Expressway horizon, Bollads eases into a distinct evening rhythm.
+                  Soft ambient lighting takes over, glasses clink with artisanal blends, and warm acoustic sets elevate your conversation.
+                  Whether you are closing an evening deal, decompressing after traffic, or meeting company you cherish, this is Ibadan's sit-down comfort with an after-hours heartbeat.
+                </p>
+                <div class="lounge-cta-group">
+                  <a
+                    href="https://wa.me/2348000000000?text=Hello%20Bollads%2C%20I%20would%20like%20to%20reserve%20a%20booth%20in%20the%20Lounge"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-primary"
+                    style="background-color: var(--color-amber-500); color: #22050B; border: none;"
+                    id="lounge-reserve-btn"
+                  >
+                    <span>Reserve a Lounge Booth</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                  </a>
+                  <a
+                    href="#location"
+                    class="btn btn-secondary"
+                    style="border-color: rgba(255,255,255,0.3); color: #FFF;"
+                    id="lounge-hours-btn"
+                  >
+                    <span>View Operating Hours</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Right: Lounge Pillars -->
+              <div class="lounge-pillars">
+                <!-- Pillar 1 -->
+                <div class="pillar-item">
+                  <div class="pillar-icon-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><circle cx="8" cy="14" r="1"/><circle cx="12" cy="14" r="1"/><circle cx="16" cy="14" r="1"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="pillar-title">Curated Evening Atmosphere</h3>
+                    <p class="pillar-text">Low amber lighting, spacious booth seating, and refined acoustic soundscapes that allow effortless conversation.</p>
+                  </div>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="pillar-item">
+                  <div class="pillar-icon-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8Z"/>
+                      <path d="M12 6v6l4 2"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="pillar-title">Signature Mixology &amp; Bottle Service</h3>
+                    <p class="pillar-text">From bespoke botanical cocktails to chilled premium lagers and vintage spirits served at the ideal chill.</p>
+                  </div>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="pillar-item">
+                  <div class="pillar-icon-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="pillar-title">Private Gatherings &amp; Decompression</h3>
+                    <p class="pillar-text">Dedicated lounge corners for birthday celebrations, corporate wind-downs, and intimate couple evenings.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. LOCATION / HOURS STRIP -->
+      <section class="location-section" id="location">
+        <div class="site-container">
+          <div class="location-card">
+            <div class="location-grid">
+              <!-- Address Details -->
+              <div>
+                <span class="section-eyebrow">Find Us on the Expressway</span>
+                <h2 class="address-block-title">Akala Expressway, Ibadan</h2>
+                <p class="address-detail">
+                  Conveniently positioned along the thriving Akala Expressway corridor, easily accessible with ample, secure on-site parking for diners and lounge guests.
+                </p>
+
+                <div class="landmark-pill">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+                  <span>Landmark: Near the New Garage &amp; Kuola Axis • Akala Express, Oyo State</span>
+                </div>
+
+                <div class="direct-contact-row">
+                  <a
+                    href="https://wa.me/2348000000000?text=Hello%20Bollads%2C%20please%20share%20directions%20to%20your%20Akala%20Expressway%20location"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-whatsapp"
+                    id="location-wa-btn"
+                  >
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.45 1.03 2.62.13.17 1.78 2.71 4.3 3.8 2.53 1.09 2.53.73 2.98.69.46-.04 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.28z"/>
+                    </svg>
+                    <span>Get Directions on WhatsApp</span>
+                  </a>
+
+                  <a
+                    href="tel:+2348000000000"
+                    class="btn btn-secondary"
+                    id="location-call-btn"
+                  >
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    <span>Call Ahead</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Operating Hours Card -->
+              <div class="hours-card">
+                <div class="hours-header">
+                  <span>Operating Hours</span>
+                  <span style="font-size: 12px; color: var(--color-amber-600); font-weight: 600;">Daily Service</span>
+                </div>
+                <div class="hours-list">
+                  <div class="hours-row">
+                    <span class="hours-day">Monday – Thursday</span>
+                    <span class="hours-time">12:00 PM – 11:30 PM</span>
+                  </div>
+                  <div class="hours-row">
+                    <span class="hours-day">Friday &amp; Saturday</span>
+                    <span class="hours-time">
+                      12:00 PM – 2:00 AM
+                      <span class="hours-badge-lounge">Late Lounge</span>
+                    </span>
+                  </div>
+                  <div class="hours-row">
+                    <span class="hours-day">Sunday Special</span>
+                    <span class="hours-time">
+                      1:00 PM – 12:00 AM
+                      <span class="hours-badge-lounge">Family &amp; Evening</span>
+                    </span>
+                  </div>
+                  <div class="hours-row" style="margin-top: 6px; padding-top: 8px; border-top: 1px dashed var(--color-border); font-size: 12px; color: var(--color-text-muted);">
+                    <span>Kitchen orders open until 1 hour before closing</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 5. SIMPLE FOOTER -->
+    <footer class="site-footer" id="site-footer">
+      <div class="site-container footer-inner">
+        <div class="footer-brand">
+          <div class="footer-brand-title">Bollads</div>
+          <div class="footer-brand-loc">Restaurant &amp; Lounge • Akala Expressway, Ibadan, Nigeria</div>
+        </div>
+
+        <div class="footer-links">
+          <a href="#hero" class="footer-link">Back to Top</a>
+          <a href="#menu" class="footer-link">Menu Highlights</a>
+          <a href="#lounge" class="footer-link">Lounge Experience</a>
+          <a href="#location" class="footer-link">Location &amp; Hours</a>
+          <a
+            href="https://wa.me/2348000000000?text=Hello%20Bollads%2C%20I%20would%20like%20to%20reserve%20a%20table"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="footer-link"
+            style="color: var(--color-amber-400); font-weight: 600;"
+          >
+            WhatsApp Concierge
+          </a>
+        </div>
+      </div>
+
+      <div class="site-container footer-bottom">
+        <div>&copy; 2026 Bollads Restaurant &amp; Lounge. All rights reserved. Pitch mockup concept.</div>
+        <div>Designed for visual impact &amp; instant owner deployment.</div>
+      </div>
+    </footer>
+
+    <!-- MOBILE STICKY QUICK ACTION BAR (intentional at 375px) -->
+    <div class="mobile-action-bar" id="mobile-sticky-action">
+      <a
+        href="https://wa.me/2348000000000?text=Hello%20Bollads%2C%20I%20would%20like%20to%20reserve%20a%20table%20or%20make%20an%20order"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn btn-whatsapp"
+        id="mobile-bottom-btn"
+      >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.45 1.03 2.62.13.17 1.78 2.71 4.3 3.8 2.53 1.09 2.53.73 2.98.69.46-.04 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.28z"/>
+        </svg>
+        <span>Reserve on WhatsApp</span>
+      </a>
+    </div>
+  </body>
+</html>

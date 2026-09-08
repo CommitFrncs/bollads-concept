@@ -1,0 +1,6 @@
+{
+  "name": "Bollads Restaurant and Lounge",
+  "description": "Landing page concept for Bollads Restaurant and Lounge on Akala Expressway, Ibadan, blending refined dining with evening lounge ambience.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
